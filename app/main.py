@@ -9,7 +9,7 @@ def main():
     server_socket.accept() # wait for client
     with closing(BytesIO()) as query_buffer:
         query_buffer.write("+PONG\r\n")
-        server_socket.send(query_buffer.getvalue())
+        server_socket.send(query_buffer)
 
 
 if __name__ == "__main__":
